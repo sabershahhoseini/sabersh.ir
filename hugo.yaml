@@ -1,0 +1,73 @@
+baseUrl: "http://sabersh.ir"
+copyright: '© 2024 Saber Shahhoseini | All rights reserved.'
+languageCode: en-us
+title: Saber's Blog
+theme: ["PaperMod"]
+
+menu:
+  main:
+    - identifier: blog
+      name: Posts
+      url: /posts
+      weight: 1
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    menu:
+      main:
+        - name: Posts
+          url: /posts
+          weight: 1
+        - name: Search
+          url: /search
+          weight: 4
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  description: "Saber Shahhoseini's blog"
+  author: Saber Shahhoseini
+  ShowPostNavLinks: true
+  ShowPageNums: true
+  homeInfoParams:
+    Title: "Saber Shahhoseini"
+    Content: >
+      👋 Welcome! This is Saber's blog!
+
+
+      - **Saber** is a DevOps enginner who's in love with Linux, networking, Golang and Kubernetes!
+
+      - Here I'll share what I learned in my career path, what I've faced in the way and other docs and stuff.
+  socialIcons:
+    - name: github
+      title: My Github account
+      url: "https://github.com/sabershahhoseini"
+    - name: linkedin
+      title: My LinkedIn account
+      url: "https://linkedin.com/in/saber-shahhoseini"
+  mainSections:
+    - posts
+
+  displayFullLangName: true
+  comments: false
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  UseHugoToc: true
+  disableScrollToTop: false
+  showtoc: true
+  tocopen: false
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
