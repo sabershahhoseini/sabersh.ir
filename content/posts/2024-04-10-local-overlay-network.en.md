@@ -12,6 +12,8 @@ ShowToc: true
 Want to know how Docker containers work? We're gonna find out!
 Today we're going to simulate container networking. We'll do this with magic of Linux namespaces, virtual ethernet devices, bridge devices, and iptables.
 
+**Note** You'll need root access to be able to run given commands.
+
 First, we'll create two network namespace for containers *container-1* and *container-2* named `c1` and `c2`. This command will create two seperate namespaces which have their own interfaces and routing tables:
 
 ```bash
@@ -153,7 +155,7 @@ ip netns exec c1 ping 8.8.8.8
 We can use `tcpdump` to see capture packets traversing through network:
 
 ```bash
-root@dont:~# sudo tcpdump -ni any dst 8.8.8.8
+root@dont:~# tcpdump -ni any dst 8.8.8.8
 16:30:13.630833 vethc1 P   IP 10.0.0.2 > 8.8.8.8: ICMP echo request, id 50500, seq 6, length 64
 16:30:13.630833 br0   In  IP 10.0.0.2 > 8.8.8.8: ICMP echo request, id 50500, seq 6, length 64
 ```
@@ -170,7 +172,7 @@ sysctl -w net.ipv4.ip_forward=1
 Now let's do another `tcpdump`:
 
 ```bash
-root@dont:~# sudo tcpdump -ni any dst 8.8.8.8
+root@dont:~# tcpdump -ni any dst 8.8.8.8
 16:44:11.020648 vethc1 P   IP 10.0.0.2 > 8.8.8.8: ICMP echo request, id 32992, seq 52, length 64
 16:44:11.020648 br0   In  IP 10.0.0.2 > 8.8.8.8: ICMP echo request, id 32992, seq 52, length 64
 16:44:11.020681 wlan0 Out IP 10.0.0.2 > 8.8.8.8: ICMP echo request, id 32992, seq 52, length 64
@@ -193,7 +195,7 @@ iptables -tnat -I POSTROUTING -o wlan0 -j MASQUERADE
 Now, do another `tcpdump` capture:
 
 ```bash
-root@dont:~# sudo tcpdump -ni any dst 8.8.8.8
+root@dont:~# tcpdump -ni any dst 8.8.8.8
 16:55:45.502663 vethc1 P   IP 10.0.0.2 > 8.8.8.8: ICMP echo request, id 49508, seq 4, length 64
 16:55:45.502663 br0   In  IP 10.0.0.2 > 8.8.8.8: ICMP echo request, id 49508, seq 4, length 64
 16:55:45.502713 wlan0 Out IP 192.168.1.108 > 8.8.8.8: ICMP echo request, id 49508, seq 4, length 64
