@@ -71,3 +71,7 @@ outputs:
     - HTML
     - RSS
     - JSON
+module:
+  mounts:
+  - source: static
+    target: static

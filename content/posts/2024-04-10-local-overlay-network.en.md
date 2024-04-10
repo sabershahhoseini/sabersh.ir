@@ -7,7 +7,7 @@ tags: ["networking", "network-namespaces", "ip-utility"]
 ShowToc: true
 ---
 
-![veth-network](http://github.com/sabershahhoseini/sabersh.ir/blob/main/static/images/2024/04/veth-network.png?raw=true)
+![veth-network](/images/2024/04/veth-network.png)
 
 Want to know how Docker containers work? We're gonna find out!
 Today we're going to simulate container networking. We'll do this with magic of Linux namespaces, virtual ethernet devices, bridge devices, and iptables.
