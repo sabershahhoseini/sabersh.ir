@@ -12,7 +12,7 @@ ShowToc: true
 Want to know how Docker containers work? We're gonna find out!
 Today we're going to simulate container networking. We'll do this with magic of Linux namespaces, virtual ethernet devices, bridge devices, and iptables.
 
-First, we'll create two network namespace for containers *container-1* and *container-2* named `con1` and `con2`. This command will create two seperate namespaces which have their own interfaces and routing tables:
+First, we'll create two network namespace for containers *container-1* and *container-2* named `c1` and `c2`. This command will create two seperate namespaces which have their own interfaces and routing tables:
 
 ```bash
 ip netns add c1
