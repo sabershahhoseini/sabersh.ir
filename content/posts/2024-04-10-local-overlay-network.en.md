@@ -1,8 +1,8 @@
 ---
 author: ["Saber Shahhoseini"]
-title: "Setup your own overlay network from scratch!"
+title: "Setup your own local overlay network from scratch!"
 date: "2024-04-10"
-description: "Let's setup our own overlay network with just a bash script!"
+description: "Let's setup a local overlay network and simulate networking between containers like Docker!"
 tags: ["networking", "network-namespaces", "ip-utility"]
 ShowToc: true
 ---
