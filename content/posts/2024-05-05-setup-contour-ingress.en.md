@@ -3,7 +3,7 @@ author: ["Saber Shahhoseini"]
 title: "Install and setup Contour ingress controller"
 date: "2024-05-05"
 description: "Setup Contour on your cluster, an Envoy-based ingress controller!"
-tags: ["contour", "ingress". "kubernetes"]
+tags: ["contour", "ingress", "kubernetes"]
 ShowToc: true
 ---
 
