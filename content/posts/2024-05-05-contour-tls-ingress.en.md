@@ -13,8 +13,6 @@ First, we'll create a simple Ingress rule to handle plain HTTP requests to our s
 
 ## Simple HTTP Ingress
 
-First, we'll create two network namespace for containers *container-1* and *container-2* named `c1` and `c2`. This command will create two seperate namespaces which have their own interfaces and routing tables:
-
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
