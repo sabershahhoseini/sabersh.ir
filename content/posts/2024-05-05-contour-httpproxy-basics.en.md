@@ -189,7 +189,7 @@ We're telling Envoy to accept 100 requests per second, with ability to burst up 
 
 ### Conditions
 
-Conditions are rules to tell select specific requests and hand it over to upstream service. For example, if query parameter `x` contains `y`, then pass it to upstream service. Here's an example:
+Conditions are rules that tell Envoy to select specific requests and hand it over to upstream service. For example, if query parameter `x` contains `y`, then pass it to upstream service. Here's an example:
 
 ```yaml
 kind: HTTPProxy
