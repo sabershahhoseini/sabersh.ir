@@ -93,3 +93,7 @@ kubectl -n projectcontour port-forward --address 0.0.0.0 svc/envoy 443:443
 ```
 
 Yeah, everything works flawlessly.
+
+### Next steps
+
+You can follow [this](https://sabersh.ir/posts/2024-05-05-contour-httpproxy-basics/) post to setup HTTPProxy, Contour's feature-rich alternative to Ingress object.
