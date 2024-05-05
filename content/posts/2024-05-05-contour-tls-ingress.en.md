@@ -3,7 +3,7 @@ author: ["Saber Shahhoseini"]
 title: "Setup TLS Ingress rule using Contour ingress controller"
 date: "2024-05-05"
 description: "Setup TLS on your Kubernetes apps using Contour"
-tags: ["networking", "contour", "ingress". "kubernetes", "tls"]
+tags: ["networking", "contour", "ingress", "kubernetes", "tls"]
 ShowToc: true
 ---
 
