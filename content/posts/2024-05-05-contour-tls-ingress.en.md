@@ -7,7 +7,7 @@ tags: ["networking", "contour", "ingress", "kubernetes", "tls"]
 ShowToc: true
 ---
 
-Today we'll setup an ingress rule using [Contour](https://github.com/projectcontour/contour). You can follow [this](https://todo) guide to setup Contour ingress controller on your K8s cluster.
+Today we'll setup an ingress rule using [Contour](https://github.com/projectcontour/contour). You can follow [this](https://sabersh.ir/posts/2024-05-05-setup-contour-ingress/) guide to setup Contour ingress controller on your K8s cluster.
 
 First, we'll create a simple Ingress rule to handle plain HTTP requests to our service for us.
 
